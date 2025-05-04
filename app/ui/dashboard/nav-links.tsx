@@ -24,7 +24,7 @@ const links = [
 export default function NavLinks() {
   const pathname = usePathname();
   const [_, base, section] = pathname.split('/');
-  const currentPath = `/${base}/${section}`;
+  const currentPath = `/${base}${section ? `/${section}` : ''}`;
 
   return (
     <>
